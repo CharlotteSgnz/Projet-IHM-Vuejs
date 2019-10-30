@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1, 
+        "pseudo": "cha",
+        "mail": "cha@gmail.com",
+        "password": "cha",
+        "city": "Grenoble",
+        "accountType": "Spectateur"
+    },
+    {
+        "id": 2,
+        "pseudo": "eme",
+        "mail": "eme@gmail.com",
+        "password": "eme",
+        "city": "Grenoble",
+        "accountType": "Spectateur"
+    }
+]
