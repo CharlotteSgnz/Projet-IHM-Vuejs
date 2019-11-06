@@ -5,7 +5,7 @@
                 <EvenementMusical v-bind:title="event.name"
                                   v-bind:date="event.date"
                                   v-bind:resume="event.description"
-                                  v-bind:img="event.urlImage"
+                                  v-bind:img="require(`@/assets/images/` + event.urlImage)"
                                   />
             </div>
     </div>
