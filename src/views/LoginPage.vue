@@ -1,7 +1,7 @@
 <template>
     <div class="login">
         <header>
-            <nav class="navbar">
+            <nav class="navbar-login">
                 <ul class="nav navbar-buttons">
                     <li @click="test='connexion'">
                         <a href="#">Connexion</a>
@@ -45,7 +45,7 @@
     flex-direction: column;
 }
 
-.navbar {
+.navbar-login {
     margin-top: 30px;
     margin-right: 100px;
     font-size: 12px;
@@ -54,13 +54,13 @@
     float: right;
 }
 
-.navbar .navbar-buttons {
+.navbar-buttons {
     float: none;
     vertical-align: top;
     
 }
 
-.navbar li a {
+.navbar-login li a {
     padding: 15px;
     color: black;
     text-decoration: none;

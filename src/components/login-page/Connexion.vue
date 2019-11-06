@@ -7,7 +7,7 @@
                        v-model="email" 
                        placeholder="email"/>
                 <input class="form-input form-control" 
-                       type="text" 
+                       type="password" 
                        v-model="password" 
                        placeholder="mot de passe"/>
                 <button type="submit" 
@@ -42,10 +42,6 @@
                             console.log("Mauvais mail ou mot de passe")
                         }
                     }
-                    
-                    
-                   
-                
             }
         }
     }

@@ -1,5 +1,5 @@
 <template>
-    <div class="search">
+    <div class="recherche">
         <header>
             <h1>Rechercher</h1>
         </header>
@@ -9,53 +9,73 @@
                     <input class="search-input form-control" 
                         type="text" 
                         v-model="request" 
-                        placeholder="petite loupe"/>
+                        />
                     <button type="submit" 
                         class="search-btn btn btn-primary">
-                        Valider
-                    </button>  
-                    <button type="" 
-                        class="filter-btn btn btn-primary">
-                        Filtrer
-                    </button>
-                </div>
-                <label> Localisation</label>
-                <input class="search-place form-control" 
-                        type="text" 
-                        v-model="place" />
+                         <icon name="search" scale='1.5'></icon>
+                    </button> 
+                </div> 
             </form>
         </div>
-        <h3 v-show="show===true">Résultat trouvé pour {{resultat}}</h3>
+        <div v-show="showResult===true">
+            <h3>Résultat trouvé pour {{resultat}}</h3>
+            <div v-for="event in eventData" v-bind:key="event.id">
+                <EvenementMusical v-bind:title="event.name"
+                                  v-bind:date="event.date"
+                                  v-bind:resume="event.description"
+                                  v-bind:img="event.urlImage"
+                                  />
+            </div>
+        </div>
+        
         
     </div>
 </template>
 
 <script>
+    import 'vue-md-icons/src/icons'
+    import Icon from 'vue-md-icons/src/components/Icon'
+    import EvenementMusical from '@/components/home-page/EvenementMusical'
+    import musicalEvent from '@/data/musicalEvent'
     export default {
+        name: 'recherche',
+        components: {
+            Icon,
+            EvenementMusical
+        },
         data(){
             return{
+                eventData: musicalEvent,
                 request: '',
                 resultat:'',
-                show: false
-            }
+                showResult: false,
+                place:''
+            }    
         },
         methods: {
             search() {
-                this.show = true;
+                this.showResult = true;
                 this.resultat = this.request
-            }
+            },
         }
     }
 </script>
 
 <style>
 
+.recherche {
+    margin-top: 5%;
+    margin-left: 15%;
+    width: 40%;
+}
+
 .form-row {
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .search-input {
-    width: 25%;
+    width:50%;
     margin-right: 10px;
 }
 
@@ -66,5 +86,7 @@
 .search-place {
     width: 10%;
 }
+
+
 
 </style>
