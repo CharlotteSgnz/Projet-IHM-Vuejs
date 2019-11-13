@@ -5,25 +5,47 @@
                 <input class="form-input form-control" type="text" v-model="pseudo" placeholder="Pseudo"/>
                 <input class="form-input form-control" type="text" v-model="mail" placeholder="Adresse mail" />
                 <input class="form-input form-control" type="text" v-model="password" placeholder="Mot de passe" />
-                <button type="submit" class="connexion-btn btn btn-primary">Inscription</button>
+                <br/>
+                <select class="custom-select" v-model="accountType">
+                    <option selected>Type de compte</option>
+                    <option value="spectateur">Spectateur</option>
+                    <option value="artiste">Artiste</option>
+                    <option value="organisateur">Organisateur</option>
+                </select>
+                <br/>
+                <button type="submit" class="connexion-btn btn btn-primary">Valider</button>
             </form>
         </div>
     </div>
 </template>
 
 <script>
-
+    import account from '@/data/account'
     export default {
         data(){
             return {
+                myData: account,
                 pseudo: '',
                 mail: '',
-                password:''
+                password:'',
+                accountType: ''
             }
         },
         methods: {
             completeForm(){
-                this.$router.push("/form-inscription")
+                if (this.pseudo !== "" && this.mail !== "" && this.password !== ""){
+                    let newAccount = {
+                        id: 3,
+                        pseudo: this.pseudo,
+                        mail: this.mail,
+                        password: this.password,
+                        accountType: this.accountType
+
+                    }
+                    this.myData.push(newAccount)
+                    this.$router.push("/home")
+                }else 
+                    alert("Veuillez remplir le formulaire")
             }
         }
     }
@@ -32,12 +54,12 @@
 <style >
 
 .form-container{
-    margin-top: 200px;
+    margin-top: 150px;
     margin-left: 40%;
 }
 
 .form-input {
-    width: 20%;
+    width: 22%;
     margin: 5px;
 }
 
@@ -45,6 +67,10 @@
     margin: 5px;
     margin-top: 10px;
     width: 20%;
+}
+
+.custom-select {
+    width: 22%;
 }
 
 </style>

@@ -140,14 +140,6 @@ li {
     text-decoration-color: bisque;
 }
 
-.underline  {
-    width: 150px;
-    height: 2px;
-    background: linear-gradient(to right, #A04112, bisque);
-    margin-top: 10px;
-    margin-left: 48px;
-}
-
 .md-icon {
     color: white;
     margin-top: -8px;  

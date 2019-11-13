@@ -27,8 +27,7 @@
                                   />
             </div>
         </div>
-        
-        
+
     </div>
 </template>
 

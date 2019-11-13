@@ -4,7 +4,6 @@
         "pseudo": "cha",
         "mail": "cha@gmail.com",
         "password": "cha",
-        "city": "Grenoble",
         "accountType": "Spectateur"
     },
     {
@@ -12,7 +11,6 @@
         "pseudo": "eme",
         "mail": "eme@gmail.com",
         "password": "eme",
-        "city": "Grenoble",
         "accountType": "Spectateur"
     }
 ]

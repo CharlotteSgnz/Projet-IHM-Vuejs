@@ -41,12 +41,16 @@
 <style >
 
 .login {
+    height: 100%;
     display: flex;
     flex-direction: column;
+    background: url('../assets/images/christian-spies-jjrVtiTAnEQ-unsplash.jpg');
+    background-size: cover;
+    
 }
 
 .navbar-login {
-    margin-top: 30px;
+    margin-top: 70px;
     margin-right: 100px;
     font-size: 12px;
     letter-spacing: 4px;
@@ -62,14 +66,14 @@
 
 .navbar-login li a {
     padding: 15px;
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
 .underline  {
     width: 45px;
-    height: 2px;
-    background: #4d1d57;
+    height: 1px;
+    background: white;
     margin-top: 10px;
     margin-left: 48px;
     

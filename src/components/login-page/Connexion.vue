@@ -49,20 +49,31 @@
 
 <style >
 
+
 .form-container{
-    margin-top: 200px;
+    margin-top: 150px;
     margin-left: 40%;
 }
 
 .form-input {
-    width: 20%;
+    width: 50%;
     margin: 5px;
+    background: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0px;
+    text-decoration-color: white;
 }
+
 
 .connexion-btn {
     margin: 5px;
-    margin-top: 10px;
+    margin-top: 15px;
     width: 20%;
+    border: none;
+    background: rgba(3, 37, 68, 0.5);
+    border-radius: 20px; 
 }
 
 </style>
