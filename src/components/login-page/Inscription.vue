@@ -20,11 +20,10 @@
 </template>
 
 <script>
-    import account from '@/data/account'
+    
     export default {
         data(){
             return {
-                myData: account,
                 pseudo: '',
                 mail: '',
                 password:'',
@@ -35,14 +34,16 @@
             completeForm(){
                 if (this.pseudo !== "" && this.mail !== "" && this.password !== ""){
                     let newAccount = {
-                        id: 3,
+                        id: localStorage.usersStorage.length + 2,
                         pseudo: this.pseudo,
                         mail: this.mail,
                         password: this.password,
                         accountType: this.accountType
-
                     }
-                    this.myData.push(newAccount)
+                    const usersStorage = JSON.parse(localStorage.getItem('usersStorage'))
+                    usersStorage.push(newAccount)
+                    localStorage.setItem('usersStorage', JSON.stringify(usersStorage))
+                    
                     this.$router.push("/home")
                 }else 
                     alert("Veuillez remplir le formulaire")
@@ -50,6 +51,7 @@
         }
     }
 </script>
+
 
 <style >
 

@@ -34,6 +34,26 @@
             return{
                 test: 'connexion',
             }
+        },
+        created(){
+            const users = [
+                {
+                    "id": 1, 
+                    "pseudo": "cha",
+                    "mail": "cha@gmail.com",
+                    "password": "cha",
+                    "accountType": "Spectateur"
+                },
+                {
+                    "id": 2,
+                    "pseudo": "eme",
+                    "mail": "eme@gmail.com",
+                    "password": "eme",
+                    "accountType": "Spectateur"
+                }
+            ]
+            
+            localStorage.setItem('usersStorage', JSON.stringify(users))
         }
     }
 </script>

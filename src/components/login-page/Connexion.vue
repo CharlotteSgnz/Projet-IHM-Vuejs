@@ -21,22 +21,23 @@
 
 <script>
 
-    import account from '@/data/account'
 
     export default {
 
         data(){
             return {
-                myData: account,
                 email: '',
-                password: ''
+                password: '',
+                data: []
             }
+        },
+        created(){
+            this.data = JSON.parse(localStorage.getItem('usersStorage'))
         },
         methods: {
             checkForm(){
-                    for (let i=0; this.myData.length; i++){
-                        if ((this.email === this.myData[i].mail) && (this.password === this.myData[i].password)){
-                            console.log(this.myData[i])
+                    for (let i=0; this.data.length; i++){
+                        if ((this.email === this.data[i].mail) && (this.password === this.data[i].password)){
                             this.$router.push("/home")
                         }else {
                             console.log("Mauvais mail ou mot de passe")
@@ -44,6 +45,7 @@
                     }
             }
         }
+    
     }
 </script>
 

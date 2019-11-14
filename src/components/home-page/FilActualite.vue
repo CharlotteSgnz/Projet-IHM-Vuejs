@@ -1,7 +1,7 @@
 <template>
     <div class="fil-actu">
         <h1>Fil d'actualités</h1>
-        <div v-for="event in eventData" v-bind:key="event.id">
+        <div v-for="event in data" v-bind:key="event.id">
                 <EvenementMusical v-bind:title="event.name"
                                   v-bind:date="event.date"
                                   v-bind:resume="event.description"
@@ -13,7 +13,6 @@
 
 <script>
     import EvenementMusical from '@/components/home-page/EvenementMusical'
-    import musicalEvent from '@/data/musicalEvent'
     export default {
         name: 'fil-actu',
         components: {
@@ -21,10 +20,12 @@
         },
          data(){
             return{
-                eventData: musicalEvent,
+                data: []
             }    
         },
-        
+        created(){
+            this.data = JSON.parse(localStorage.getItem('eventsStorage'))
+        },  
     }
 </script>
 

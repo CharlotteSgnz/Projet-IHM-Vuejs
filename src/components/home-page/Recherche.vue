@@ -19,11 +19,11 @@
         </div>
         <div v-show="showResult===true">
             <h3>Résultat trouvé pour {{resultat}}</h3>
-            <div v-for="event in eventData" v-bind:key="event.id">
+            <div v-for="event in this.data" v-bind:key="event.id">
                 <EvenementMusical v-bind:title="event.name"
                                   v-bind:date="event.date"
                                   v-bind:resume="event.description"
-                                  v-bind:img="require(`@/assets/images/` + event.urlImage)"
+                                  v-bind:img="event.urlImage"
                                   />
             </div>
         </div>
@@ -35,7 +35,6 @@
     import 'vue-md-icons/src/icons'
     import Icon from 'vue-md-icons/src/components/Icon'
     import EvenementMusical from '@/components/home-page/EvenementMusical'
-    import musicalEvent from '@/data/musicalEvent'
     export default {
         name: 'recherche',
         components: {
@@ -44,13 +43,16 @@
         },
         data(){
             return{
-                eventData: musicalEvent,
+                data: [],
                 request: '',
                 resultat:'',
                 showResult: false,
                 place:''
             }    
         },
+        created(){
+            this.data = JSON.parse(localStorage.getItem('eventsStorage'))
+        }, 
         methods: {
             search() {
                 this.showResult = true;
