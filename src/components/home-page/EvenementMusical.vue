@@ -1,56 +1,38 @@
 <template>
     <div class="musical-event">
-        <div class="card">
-            <img :src="img">
+        <div class="card mb-3">
+            <img :src="img" class="card-img-top" alt="couverture de l'evenement">
             <div class="card-body">
-                <h1>{{title}}</h1>
-                <p>{{date}}</p>
-                <p>{{resume}}</p>
+                <h5 class="card-title">{{ title }}</h5>
+                <p class="card-text">{{ resume }}</p>
+                <p class="card-text"><small class="text-muted">Le {{ date }}</small></p>
+                <!-- <a href="/" @click.native="selected(event.id)" class="btn btn-primary">Découvrir</a> -->
             </div>
-            <div class="card-footer">
-            </div>
-        </div>
-    
+        </div>   
     </div>
 </template>
 
 <script>
-
     export default {
-        data(){
-            return {
-            }    
-        },
         props: {
+            img: String,
             title: String,
             date: String,
-            resume: String,
-            img: String
+            resume: String
+        },
 
+        methods: {
+            selected (eventId) {
+                this.$router.push({ name: 'EvenementDetails', params: { eventId } })
+            },
         }
     }
 </script>
 
 <style>
-
-.card {
-    height: 380px;
-    width: 100%;
-    margin-top: 5%; 
-    margin-bottom: 30px;
-    box-shadow: 0 0.5px 3px rgb(49, 49, 49);
-
-}
-
-.card-footer {
-    height: 20px;
-    background: rgb(0, 0, 0, .125);
-}
-
-img {
-    height: 150px;
-}
-
-
-
+    .card {
+        width: 100%;
+        margin-top: 32px; 
+        margin-bottom: 32px;
+    }
 </style>

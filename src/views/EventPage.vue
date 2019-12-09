@@ -1,14 +1,14 @@
 <template>
-    <div class="event">
-        Event page
-    </div>
+  <Layout>
+    <!-- TODO: à implémenter -->
+    EventPage
+  </Layout>
 </template>
 
 <script>
-    export default {
-        name: "event"
-        
-    }
+  export default {
+
+  }
 </script>
 
 <style>
