@@ -1,4 +1,5 @@
 <template>
+    <Layout>
     <div class="fil-actu">
         <h1>Fil d'actualités</h1>
         <div v-for="event in data" v-bind:key="event.id">
@@ -11,6 +12,7 @@
             />
         </div>
     </div>
+    </Layout>
 </template>
 
 <script>
@@ -40,10 +42,5 @@
 
 <style>
 
-.fil-actu {
-    /* margin-top: 5%; */
-    /* margin-left: 15%; */
-    /* width: 40%; */
-}
 
 </style>

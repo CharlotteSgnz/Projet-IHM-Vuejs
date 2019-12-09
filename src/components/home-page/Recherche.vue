@@ -1,4 +1,5 @@
 <template>
+    <Layout class="home">
     <div class="recherche">
         <header>
             <h1>Rechercher</h1>
@@ -27,8 +28,8 @@
                                   />
             </div>
         </div>
-
     </div>
+    </Layout>
 </template>
 
 <script>

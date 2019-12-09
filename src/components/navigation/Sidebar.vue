@@ -2,19 +2,19 @@
     <nav class="nav">
         <ul>
             <li>
-                <span><icon name="home" scale='1.5'></icon></span><span><a href='#' class="itMenu" @click="choice='accueil'">Accueil</a></span>
+                <span><icon name="home" scale='1.5'></icon></span><span><a href='#' class="itMenu" @click="goToHome()">Accueil</a></span>
                 <div v-show="choice==='accueil'" class="underline"></div>
             </li>
             <li>
-                <icon name="search" scale='1.5'></icon><a href='#' class="itMenu" @click="choice='recherche'">Recherche</a>
+                <icon name="search" scale='1.5'></icon><a href='#' class="itMenu" @click="goToSearch()">Recherche</a>
                 <div v-show="choice==='recherche'" class="underline"></div>
             </li>
             <li>
-                <icon name="email" scale='1.5'></icon><a href='#' class="itMenu" @click="choice='messagerie'">Messagerie</a>
+                <icon name="email" scale='1.5'></icon><a href='#' class="itMenu" @click="goToMessages()">Messagerie</a>
                 <div v-show="choice==='messagerie'" class="underline"></div>
             </li>
             <li>
-                <icon name="people" scale='1.5'></icon><a href='#' class="itMenu" @click="choice='abonnements'">Abonnements</a>
+                <icon name="people" scale='1.5'></icon><a href='#' class="itMenu" @click="goToSubscribers">Abonnements</a>
                 <div v-show="choice==='abonnements'" class="underline"></div>
             </li>
             <li>
@@ -34,6 +34,21 @@
 
        components: {
            Icon
+       },
+       methods: {
+           goToHome(){
+               this.$router.push("/home")
+           },
+           goToSearch(){
+               this.$router.push("/search")
+           },
+           goToMessages(){
+               this.$router.push("/messages")
+           },
+           goToSubscribers(){
+               this.$router.push("/subscribers")
+           }
+           
        }
     }
 </script>

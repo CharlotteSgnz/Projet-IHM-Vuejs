@@ -1,16 +1,10 @@
 <template>
     <div>
-        <!-- Header -->
-        <nav class="navbar">
-            <span class="navbar-brand mb-0 h1">IHM</span>
-            <span class="navbar-deco-button">
-                <router-link to ="/">Déconnexion</router-link>
-            </span>
-        </nav>
+        <Header/>
         <div class="wrapper">
             <!-- Sidebar -->
             <Sidebar class="menu py-1" />
-            <!-- Contenu dynamique -->
+            <!-- Contenu dynamique : on injecte les composants dans le slot-->
             <main class="container my-5">
                 <slot />
             </main>
@@ -20,12 +14,14 @@
 
 <script>
     import Sidebar from '@/components/navigation/Sidebar'
+    import Header from '@/components/navigation/Header'
 
     export default {
         name: 'Layout',
 
         components: {
             Sidebar,
+            Header
         }
     }
 </script>

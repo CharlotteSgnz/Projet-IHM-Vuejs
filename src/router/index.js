@@ -1,8 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import LoginPage from '../views/LoginPage.vue'
-import HomePage from '../views/HomePage.vue'
+import FilActualite from '../components/home-page/FilActualite.vue'
 import EventPage from '../views/EventPage.vue'
+import Recherche from '../components/home-page/Recherche.vue'
+import Messagerie from '../components/home-page/Messagerie.vue'
+import Abonnements from '../components/home-page/Abonnements.vue'
 
 Vue.use(VueRouter)
 
@@ -15,12 +18,27 @@ const routes = [
   {
     path: '/home',
     name: 'home',
-    component: HomePage
+    component: FilActualite
   },
   {
     path: '/event/:id',
     name: 'event',
     component: EventPage
+  },
+  {
+    path: '/search',
+    name: 'search',
+    component: Recherche
+  },
+  {
+    path: '/messages',
+    name: 'messages',
+    component: Messagerie
+  },
+  {
+    path: '/subscribers',
+    name: 'subscribers',
+    component: Abonnements
   }
 ]
 
