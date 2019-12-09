@@ -64,7 +64,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    background: url('../assets/images/christian-spies-jjrVtiTAnEQ-unsplash.jpg');
+    background: url('../assets/images/background.jpg');
     background-size: cover;
     
 }

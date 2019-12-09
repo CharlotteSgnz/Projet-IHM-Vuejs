@@ -2,12 +2,14 @@
     <div class="fil-actu">
         <h1>Fil d'actualités</h1>
         <div v-for="event in data" v-bind:key="event.id">
+            
                 <EvenementMusical v-bind:title="event.name"
                                   v-bind:date="event.date"
                                   v-bind:resume="event.description"
                                   v-bind:img="require(`@/assets/images/` + event.urlImage)"
-                                  />
-            </div>
+                                  @click.native="goToEvent(event.id)"/>
+            
+        </div>
     </div>
 </template>
 
@@ -25,7 +27,12 @@
         },
         created(){
             this.data = JSON.parse(localStorage.getItem('eventsStorage'))
-        },  
+        }, 
+        methods: {
+            goToEvent(id){
+                this.$router.push("/event/" + id)
+            }
+        } 
     }
 </script>
 
