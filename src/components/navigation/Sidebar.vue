@@ -35,6 +35,12 @@
        components: {
            Icon
        },
+       data(){
+           return {
+            choice: 'accueil'
+           }
+           
+       },
        methods: {
            goToHome(){
                this.$router.push("/home")
@@ -55,13 +61,15 @@
 
 <style>
 .nav {
+    
     display: inline-block;
     width: 300px;
     font-weight: bold;
-    background: #2D2D2D;
+    background: rgb(240, 240, 240);
 }
 
 .nav ul {
+    margin-top: 20px;
     padding: 16px;
     list-style: none;
 }
@@ -72,9 +80,8 @@ li {
 }
 
 .itMenu {
-    background: #2D2D2D;
-    border: none;
-    color:bisque;
+    font-family: 'Rubik', sans-serif;
+    color: #515558;
     opacity: 60%;
     text-decoration: none;
     text-decoration-color: none;
@@ -83,17 +90,17 @@ li {
 .itMenu:hover {
     opacity: 100%;
     text-decoration: none;
-    color: bisque; 
+    color: #081627; 
 }
 
 .nav a:focus {
     opacity: 100%;
     text-decoration: none;
-    text-decoration-color: bisque;
+    text-decoration-color: #081627; 
 }
 
 .md-icon {
-    color: white;
+    color: #515558;
     padding-top: -8px;
     padding-right: 8px
 }

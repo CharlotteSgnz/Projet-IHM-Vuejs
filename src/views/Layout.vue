@@ -6,7 +6,7 @@
             <Sidebar class="menu py-1" />
             <!-- Contenu dynamique : on injecte les composants dans le slot-->
             <main class="container my-5">
-                <slot />
+                <slot> <FilActualite/> </slot>
             </main>
         </div>
     </div>
@@ -31,28 +31,8 @@
     display: flex;
     width: 100%;
     align-items: stretch;
+    background-color: rgb(240, 240, 240);
 }
 
-/**
- * Header
- */
-.navbar {
-    background: #260f2f;
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    border: #000;
-    box-shadow: 0 1px 6px #000;
-}
 
-.navbar-deco-button a {
-    color: white;
-    text-decoration: none;
-}
-
-/**
- * Sidebar
- */
 </style>

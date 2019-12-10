@@ -65,11 +65,6 @@
 
 <style>
 
-.recherche {
-    margin-top: 5%;
-    margin-left: 15%;
-    width: 40%;
-}
 
 .form-row {
     margin-top: 20px;

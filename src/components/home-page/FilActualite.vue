@@ -1,7 +1,6 @@
 <template>
     <Layout>
     <div class="fil-actu">
-        <h1>Fil d'actualités</h1>
         <div v-for="event in data" v-bind:key="event.id">
             <EvenementMusical 
                 v-bind:title="event.name"
@@ -19,7 +18,7 @@
     import EvenementMusical from '@/components/home-page/EvenementMusical'
     
     export default {
-        name: 'fil-actu',
+        name: 'FilActu',
         components: {
             EvenementMusical,
         },
