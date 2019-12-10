@@ -6,7 +6,6 @@
                 <h5 class="card-title">{{ title }}</h5>
                 <p class="card-text">{{ resume }}</p>
                 <p class="card-text"><small class="text-muted">Le {{ date }}</small></p>
-                <!-- <a href="/" @click.native="selected(event.id)" class="btn btn-primary">Découvrir</a> -->
             </div>
         </div>   
     </div>

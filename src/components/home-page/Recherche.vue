@@ -25,6 +25,7 @@
                                   v-bind:date="event.date"
                                   v-bind:resume="event.description"
                                   v-bind:img="require(`@/assets/images/` + event.urlImage)"
+                                  @click.native="goToEvent(event.id)"
                                   />
             </div>
         </div>
@@ -64,7 +65,9 @@
 </script>
 
 <style>
-
+.recherche {
+    margin-top: 20px;
+}
 
 .form-row {
     margin-top: 20px;
