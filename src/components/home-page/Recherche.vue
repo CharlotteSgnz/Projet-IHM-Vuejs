@@ -2,9 +2,14 @@
     <Layout class="home">
     <div class="recherche">
         <header>
-            <h1>Rechercher</h1>
+            <h1>Recherche</h1>
         </header>
-        <div class="search-container">
+        <div><span class="RechercheU"><a class="linkUE" href='home#' @click="choice='U'">Utilisateurs</a></span><span class="RechercheE"><a class="linkUE" href='home#' @click="choice='E'">Événements</a></span></div>
+        <div v-show="choice==='U'" class="underlineU"></div>
+        <div v-show="choice==='E'" class="underlineE"></div>
+        
+        <!-- Recherche Utilisateur -->
+        <div class="searchU" v-show="choice==='U'">
             <form  @submit.prevent="search()">
                 <div class="form-row">
                     <input class="search-input form-control" 
@@ -18,6 +23,12 @@
                 </div> 
             </form>
         </div>
+
+        <!-- Recherche Événement -->
+        <div class="searchE" v-show="choice==='E'">
+            <p>poussière</p>
+        </div>
+
         <div v-show="showResult===true">
             <h3>Résultat trouvé pour {{resultat}}</h3>
             <div v-for="event in this.data" v-bind:key="event.id">
@@ -25,10 +36,10 @@
                                   v-bind:date="event.date"
                                   v-bind:resume="event.description"
                                   v-bind:img="require(`@/assets/images/` + event.urlImage)"
-                                  @click.native="goToEvent(event.id)"
                                   />
             </div>
         </div>
+
     </div>
     </Layout>
 </template>
@@ -49,7 +60,8 @@
                 request: '',
                 resultat:'',
                 showResult: false,
-                place:''
+                place:'',
+                choice: 'U'
             }    
         },
         created(){
@@ -65,8 +77,11 @@
 </script>
 
 <style>
+
 .recherche {
-    margin-top: 20px;
+    margin-top: 5%;
+    margin-left: 18%;
+    width: 40%;
 }
 
 .form-row {
@@ -77,6 +92,8 @@
 .search-input {
     width:50%;
     margin-right: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
 }
 
 .filter-btn {
@@ -85,6 +102,57 @@
 
 .search-place {
     width: 10%;
+}
+
+.RechercheU {
+    margin-left: 20px;
+    font-size: 25px;
+}
+
+.linkUE {
+    opacity: 60%;
+    text-decoration: none;
+    text-decoration-color: none;
+    color: black;
+
+}
+
+.linkUE:hover {
+    opacity: 100%;
+    text-decoration: none;
+    text-decoration-color: none;
+    color: black;
+
+}
+
+.linkUE:focus {
+    opacity: 100%;
+    text-decoration: none;
+    text-decoration-color: none;
+    color: black;
+
+}
+
+
+.underlineU {
+    width: 135px;
+    height: 2px;
+    background: darkblue;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+.underlineE {
+    width: 142px;
+    height: 2px;
+    background: darkblue;
+    margin-top: 5px;
+    margin-left: 182px;
+}
+
+.RechercheE {
+    margin-left: 45px;
+    font-size: 25px;
 }
 
 
