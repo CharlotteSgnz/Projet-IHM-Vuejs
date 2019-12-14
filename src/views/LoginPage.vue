@@ -42,14 +42,24 @@
                     "pseudo": "cha",
                     "mail": "cha@gmail.com",
                     "password": "cha",
-                    "accountType": "Spectateur"
+                    "accountType": "Spectateur",
+                    "urlAvatar": "Charlotte.jpeg"
                 },
                 {
                     "id": 2,
                     "pseudo": "eme",
                     "mail": "eme@gmail.com",
                     "password": "eme",
-                    "accountType": "Spectateur"
+                    "accountType": "Spectateur",
+                    "urlAvatar": "Emeline.jpeg"
+                },
+                {
+                    "id": 3,
+                    "pseudo": "James Bond",
+                    "mail": "jamesb@gmail.com",
+                    "password": "007",
+                    "accountType": "Spectateur",
+                    "urlAvatar": "JamesBond.jpeg"
                 }
             ]
             
