@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar fixed-top">
+    <nav class="navbar">
             <span class="navbar-brand mb-0 h1">FYME</span>
             <span class="navbar-deco-button">
                 <router-link to ="/">Déconnexion</router-link>
