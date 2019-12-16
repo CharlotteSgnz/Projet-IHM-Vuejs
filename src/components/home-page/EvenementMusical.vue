@@ -21,9 +21,7 @@
         },
 
         methods: {
-            selected (eventId) {
-                this.$router.push({ name: 'EvenementDetails', params: { eventId } })
-            },
+        
         }
     }
 </script>

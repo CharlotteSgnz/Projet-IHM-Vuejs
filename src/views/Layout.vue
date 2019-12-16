@@ -40,9 +40,7 @@
                     "urlImage": "TomorrowlandWinter2020.jpg"
                 }
             ]
-
-            localStorage.setItem('eventsStorage', JSON.stringify(events));
-
+            localStorage.setItem('eventsStorage', JSON.stringify(events))
         }
     }
 </script>
