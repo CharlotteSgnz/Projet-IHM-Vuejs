@@ -6,6 +6,7 @@ import EventPage from '../views/EventPage.vue'
 import Recherche from '../components/home-page/Recherche.vue'
 import Messagerie from '../components/home-page/Messagerie.vue'
 import Abonnements from '../components/home-page/Abonnements.vue'
+import CreationEvent from '../components/home-page/CreationEvent'
 
 Vue.use(VueRouter)
 
@@ -39,6 +40,11 @@ const routes = [
     path: '/subscribers',
     name: 'subscribers',
     component: Abonnements
+  },
+  {
+    path: '/createEvent',
+    name: 'createEvent',
+    component: CreationEvent
   }
 ]
 

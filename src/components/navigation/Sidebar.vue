@@ -14,12 +14,12 @@
                 <div v-show="choice==='messagerie'" class="underline"></div>
             </li>
             <li>
-                <icon name="people" scale='1.5'></icon><a href='#' class="itMenu" @click="goToSubscribers">Abonnements</a>
+                <icon name="people" scale='1.5'></icon><a href='#' class="itMenu" @click="goToSubscribers()">Abonnements</a>
                 <div v-show="choice==='abonnements'" class="underline"></div>
             </li>
             <li>
-                <icon name="add_circle" scale='1.5'></icon><a href='#' class="itMenu" @click="choice='nouveauEvenement'">Créer évènement</a>
-                <div v-show="choice==='abonnements'" class="underline"></div>
+                <icon name="add_circle" scale='1.5'></icon><a href='#' class="itMenu" @click="goToCreateEvent()">Créer évènement</a>
+                <div v-show="choice==='createEvent'" class="underline"></div>
             </li>
         </ul>
     </nav>
@@ -53,6 +53,9 @@
            },
            goToSubscribers(){
                this.$router.push("/subscribers")
+           },
+           goToCreateEvent(){
+               this.$router.push("/createEvent")
            }
            
        }
