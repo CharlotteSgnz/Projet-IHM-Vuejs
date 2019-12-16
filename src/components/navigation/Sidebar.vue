@@ -59,13 +59,12 @@
     }
 </script>
 
-<style>
+<style scoped>
 .nav {
     
     display: inline-block;
     width: 300px;
     font-weight: bold;
-    background: rgb(240, 240, 240);
 }
 
 .nav ul {
