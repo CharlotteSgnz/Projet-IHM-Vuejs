@@ -43,7 +43,8 @@
                     "mail": "cha@gmail.com",
                     "password": "cha",
                     "accountType": "Spectateur",
-                    "urlAvatar": "Charlotte.jpeg"
+                    "urlAvatar": "Charlotte.jpeg",
+                    "description": "Je veux taper du pieeeeeed !"
                 },
                 {
                     "id": 2,
@@ -51,7 +52,8 @@
                     "mail": "eme@gmail.com",
                     "password": "eme",
                     "accountType": "Spectateur",
-                    "urlAvatar": "Emeline.jpeg"
+                    "urlAvatar": "Emeline.jpeg",
+                    "description": "J'aime trop la musique et la bière !"
                 },
                 {
                     "id": 3,
@@ -59,7 +61,17 @@
                     "mail": "jamesb@gmail.com",
                     "password": "007",
                     "accountType": "Spectateur",
-                    "urlAvatar": "JamesBond.jpeg"
+                    "urlAvatar": "JamesBond.jpeg",
+                    "description": "My name is Bond, James Bond."
+                },
+                {
+                    "id": 4,
+                    "pseudo": "Marilyn Manson",
+                    "mail": "666@gmail.com",
+                    "password": "say10",
+                    "accountType": "Artiste",
+                    "urlAvatar": "MarilynM.jpeg",
+                    "description": "C'est trop bien ce que je fais 6664ever."
                 }
             ]
             

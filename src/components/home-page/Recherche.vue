@@ -135,7 +135,7 @@
 .recherche {
     margin-top: 5%;
     margin-left: 18%;
-    width: 40%;
+    width: 65%;
 }
 
 .form-row {

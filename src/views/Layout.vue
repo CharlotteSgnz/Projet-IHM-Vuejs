@@ -6,7 +6,7 @@
             <Sidebar class="lemenu menu py-1" />
             <!-- Contenu dynamique : on injecte les composants dans le slot-->
             <main class="container my-5">
-                <slot> <FilActualite/> </slot>
+                <slot> <FilActualite></FilActualite> </slot>
             </main>
         </div>
     </div>
