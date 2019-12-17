@@ -7,6 +7,7 @@ import Recherche from '../components/home-page/Recherche.vue'
 import Messagerie from '../components/home-page/Messagerie.vue'
 import Abonnements from '../components/home-page/Abonnements.vue'
 import CreationEvent from '../components/home-page/CreationEvent'
+import ConvPage from '../views/ConvPage.vue'
 
 Vue.use(VueRouter)
 
@@ -26,6 +27,11 @@ const routes = [
     name: 'event',
     component: EventPage
   },
+  {
+    path: '/chat/:id',
+    name: 'chat',
+    component: ConvPage
+  }, 
   {
     path: '/search',
     name: 'search',

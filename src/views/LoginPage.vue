@@ -44,7 +44,7 @@
                     "password": "cha",
                     "accountType": "Spectateur",
                     "urlAvatar": "Charlotte.jpeg",
-                    "description": "Je veux taper du pieeeeeed !"
+                    "description": "Je veux du hardcore, ok ?"
                 },
                 {
                     "id": 2,

@@ -4,7 +4,7 @@
         <header>
             <h1>Recherche</h1>
         </header>
-        <div><span class="RechercheU"><a class="linkUE" @click="choice='U'">Utilisateurs</a></span><span class="RechercheE"><a class="linkUE" @click="choice='E'">Événements</a></span></div>
+        <div class="searchSelector"><span class="RechercheU"><a class="linkUE" @click="choice='U'">Utilisateurs</a></span><span class="RechercheE"><a class="linkUE" @click="choice='E'">Événements</a></span></div>
         <div v-show="choice==='U'" class="underlineU"></div>
         <div v-show="choice==='E'" class="underlineE"></div>
         
@@ -64,7 +64,8 @@
                     <div clas="col-xs-12 col-sm-6 col-md-4">
                         <Utilisateur v-bind:name="users.pseudo"
                              v-bind:type="users.accountType"
-                            v-bind:img="require(`@/assets/images/` + users.urlAvatar)"
+                             v-bind:img="require(`@/assets/images/` + users.urlAvatar)"
+                             v-bind:description="users.description"
                         />
                     </div>
             </div>
@@ -133,9 +134,13 @@
 <style>
 
 .recherche {
-    margin-top: 5%;
-    margin-left: 18%;
+    margin-top: 2%;
+    margin-left: 10%;
     width: 65%;
+}
+
+.searchSelector {
+    margin-top: 2%;
 }
 
 .form-row {

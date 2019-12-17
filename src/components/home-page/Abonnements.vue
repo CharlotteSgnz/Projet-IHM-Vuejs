@@ -10,6 +10,7 @@
                         <Utilisateur v-bind:name="users.pseudo"
                              v-bind:type="users.accountType"
                             v-bind:img="require(`@/assets/images/` + users.urlAvatar)"
+                            v-bind:description="users.description"
                         />
                     </div>
             </div>
@@ -38,8 +39,8 @@
 
 <style>
     .abonnements {
-        margin-top: 5%;
-        margin-left: 18%;
+        margin-top: 2%;
+    margin-left: 10%;
         
     }
 </style>
