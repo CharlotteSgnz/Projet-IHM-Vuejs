@@ -52,6 +52,7 @@
                                   v-bind:date="event.date"
                                   v-bind:resume="event.description"
                                   v-bind:img="require(`@/assets/images/` + event.urlImage)"
+                                  @click.native="goToEvent(event.id)"
                                   />
             </div>
         </div>
@@ -66,6 +67,8 @@
                              v-bind:type="users.accountType"
                              v-bind:img="require(`@/assets/images/` + users.urlAvatar)"
                              v-bind:description="users.description"
+                             v-bind:abonnement="users.abo"
+                             v-bind:styles="users.styles"
                         />
                     </div>
             </div>
@@ -103,7 +106,7 @@
                 showResultU: false,
                 showResultE: false,
                 place:'',
-                choice: 'U',
+                choice: 'U'
 
             }    
         },
@@ -126,6 +129,9 @@
             searchU() {
                 this.showResultU = true;
                 this.resultatU = this.requestU;
+            },
+            goToEvent(id) {
+                this.$router.push({ name: 'event', params: { id } })
             }
         }
     }
@@ -136,7 +142,8 @@
 .recherche {
     margin-top: 2%;
     margin-left: 10%;
-    width: 65%;
+    width: 80%;
+   
 }
 
 .searchSelector {
@@ -149,7 +156,7 @@
 }
 
 .search-inputU {
-    width: 50%;
+    width: 30%;
     margin-left: 20px;
     margin-top: 20px;
 }
@@ -162,7 +169,7 @@
 }
 
 .search-buttonU {
-    width: 25%;
+    width: 15%;
     height: 38px;
     margin-top: 20px;
     margin-left: 20px;
@@ -179,7 +186,7 @@
     margin-left: 20px;
     margin-top: 20px;
     height: 38px;
-    width: 43%;
+    width: 15%;
     background: darkblue;
     border-color: darkblue;
 }
@@ -235,7 +242,7 @@
 
 
 .underlineU {
-    width: 135px;
+    width: 148px;
     height: 2px;
     background: darkblue;
     margin-top: 5px;
@@ -243,11 +250,11 @@
 }
 
 .underlineE {
-    width: 142px;
+    width: 170px;
     height: 2px;
     background: darkblue;
     margin-top: 5px;
-    margin-left: 182px;
+    margin-left: 195px;
 }
 
 .RechercheE {
