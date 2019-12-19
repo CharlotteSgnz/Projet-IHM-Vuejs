@@ -44,7 +44,10 @@
                     "password": "cha",
                     "accountType": "Spectateur",
                     "urlAvatar": "Charlotte.jpeg",
-                    "description": "Je veux du hardcore, ok ?"
+                    "description": "Ceci est ma super description.",
+                    "abo": "S'abonner",
+                    "desabo": "Se désabonner",
+                    "styles": "Hardore, Electro, House, Minimal"
                 },
                 {
                     "id": 2,
@@ -53,16 +56,22 @@
                     "password": "eme",
                     "accountType": "Spectateur",
                     "urlAvatar": "Emeline.jpeg",
-                    "description": "J'aime trop la musique et la bière !"
+                    "description": "Ceci est ma super description.",
+                    "abo": "S'abonner",
+                    "desabo": "Se désabonner",
+                    "styles": "Rock, Punk, Psyché, Trance"
                 },
                 {
                     "id": 3,
-                    "pseudo": "James Bond",
-                    "mail": "jamesb@gmail.com",
-                    "password": "007",
+                    "pseudo": "Fan de Johnny",
+                    "mail": "johnnyb@gmail.com",
+                    "password": "johnny",
                     "accountType": "Spectateur",
-                    "urlAvatar": "JamesBond.jpeg",
-                    "description": "My name is Bond, James Bond."
+                    "urlAvatar": "FanJohnny.jpeg",
+                    "description": "Ceci est ma super description.",
+                    "abo": "S'abonner",
+                    "desabo": "Se désabonner"  ,
+                    "styles": "Johnny, Johnny, Johnny, Johnny "                  
                 },
                 {
                     "id": 4,
@@ -71,7 +80,46 @@
                     "password": "say10",
                     "accountType": "Artiste",
                     "urlAvatar": "MarilynM.jpeg",
-                    "description": "C'est trop bien ce que je fais 6664ever."
+                    "description": "Ceci est ma super description.",
+                    "abo": "S'abonner",
+                    "desabo": "Se désabonner",
+                    "styles": "Metal, Goth Metal, Grunge, Metal Alternatif"                  
+                },
+                {
+                    "id": 5,
+                    "pseudo": "Angerfist",
+                    "mail": "angerfist@gmail.com",
+                    "password": "angerfist",
+                    "accountType": "Artiste",
+                    "urlAvatar": "Angerfist.jpeg",
+                    "description": "Ceci est ma super description.",
+                    "abo": "S'abonner",
+                    "desabo": "Se désabonner",
+                    "styles": "Techno, Hardcore, Gabber"                  
+                },
+                {
+                    "id": 6,
+                    "pseudo": "Rockstore",
+                    "mail": "rockstore@gmail.com",
+                    "password": "rockstore",
+                    "accountType": "Organisateur",
+                    "urlAvatar": "Rockstore.jpeg",
+                    "description": "Ceci est ma super description.",
+                    "abo": "S'abonner",
+                    "desabo": "Se désabonner",
+                    "styles": "Electro, Rap, Rock, Jazz"                  
+                },
+                {
+                    "id": 7,
+                    "pseudo": "Transbordeur",
+                    "mail": "transbordeur@gmail.com",
+                    "password": "transbo",
+                    "accountType": "Organisateur",
+                    "urlAvatar": "Transbordeur.png",
+                    "description": "Ceci est ma super description.",
+                    "abo": "S'abonner",
+                    "desabo": "Se désabonner",
+                    "styles": "Electro, Techno, Rock, Rap"                  
                 }
             ]
             
