@@ -84,7 +84,7 @@
             </ul>
 					</div> -->
 				<div class="form-inline d-flex justify-content-end">
-          <button type="submit" class="btn submit-btn btn-light aligned-with-icon lebouton">Créer un évènement</button>
+          <button type="submit" class="btn submit-btn btn-light aligned-with-icon lebouton" @click="validateForm()">Créer un évènement</button>
 				</div>
         </form>
     </Layout>
@@ -115,7 +115,11 @@
 						addStyles() {
 							this.stylesList.push(this.musicStyle)
 							this.stylesList = null
+            },
+            validateForm(){
+                        this.$router.push("/home")      
             }
+
         }
     }
 </script>

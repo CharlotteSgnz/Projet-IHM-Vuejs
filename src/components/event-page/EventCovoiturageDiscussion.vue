@@ -26,6 +26,7 @@
       <div class="row">
         <div class="col">
           <input type="text" class="form-control" placeholder="Préciser votre ville de départ">
+          <a href="#" class="btn btn-primary">Rechercher</a>
         </div>
       </div>
       <div class="row">
