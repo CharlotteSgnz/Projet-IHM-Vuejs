@@ -82,7 +82,7 @@
   border-radius: 50%;
 }
 
-.btn {
+#dropdown-1__BV_toggle_ {
     background: transparent !important;
     border: none;
 }

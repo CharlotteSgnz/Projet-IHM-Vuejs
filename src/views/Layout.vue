@@ -82,8 +82,6 @@
     background-color: white;
 }
 
-.container {
-}
 
 
 </style>
