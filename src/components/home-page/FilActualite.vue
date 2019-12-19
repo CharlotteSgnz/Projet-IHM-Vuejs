@@ -8,6 +8,7 @@
                 v-bind:resume="event.description"
                 v-bind:img="require(`@/assets/images/` + event.urlImage)"
                 @click.native="goToEvent(event.id)"
+                class="event-card-actu"
             />
         </div>
     </div>
@@ -40,6 +41,8 @@
 </script>
 
 <style>
-
+.event-card-actu {
+    cursor: pointer;
+}
 
 </style>

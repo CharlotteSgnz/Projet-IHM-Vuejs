@@ -36,11 +36,11 @@
                     <input type="text" class="form-control" >
                 </div>
                 <div class="form-group col-md-4">
-                    <label>Image 1</label>
+                    <label>Image bannière</label>
                     <input type="file">
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="inputZip">Image 2</label>
+                    <label for="inputZip">Image description</label>
                     <input type="file" >
                 </div>
             </div>

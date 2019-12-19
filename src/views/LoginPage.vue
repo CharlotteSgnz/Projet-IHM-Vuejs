@@ -1,21 +1,38 @@
 <template>
     <div class="login">
-        <header>
-            <nav class="navbar-login">
-                <ul class="nav navbar-buttons">
-                    <li @click="test='connexion'">
-                        <a href="#">Connexion</a>
-                        <div v-show="test==='connexion'" class="underline"></div>
-                    </li>
-                    <li @click="test='inscription'">
-                        <a href="#">Inscription</a>
-                        <div v-show="test==='inscription'" class="underline"></div>
-                    </li>
-                </ul>
-            </nav>
+        <header class="d-flex">
+            <div class="container">
+                <div class="row">
+                    <!-- Left -->
+                    <div class="col d-flex justify-content-start">
+                         <nav class="navbar-logo">
+                            <ul class="nav navbar-buttons">
+                                <li>
+                                    <h1>FYME</h1>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- Right -->
+                    <div class="col d-flex justify-content-end">
+                        <nav class="navbar-login">
+                            <ul class="nav navbar-buttons">
+                                <li @click="test='connexion'">
+                                    <a href="#">Connexion</a>
+                                    <div v-show="test==='connexion'" class="underline"></div>
+                                </li>
+                                <li @click="test='inscription'">
+                                    <a href="#">Inscription</a>
+                                    <div v-show="test==='inscription'" class="underline"></div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
         </header>
-        <div v-show="test==='connexion'"><Connexion/></div>     
-        <div v-show="test==='inscription'"><Inscription/></div>
+        <div v-show="test==='connexion'" class="login-content"><Connexion/></div>     
+        <div v-show="test==='inscription'" class="login-content"><Inscription/></div>
     </div>
 </template>
 
@@ -128,34 +145,55 @@
     }
 </script>
 
-<style >
+<style>
+
+
 
 .login {
     height: 100%;
     display: flex;
     flex-direction: column;
+    padding-top: 70px;
     background: url('../assets/images/background.jpg');
-    background-size: cover;
-    
+    background-size: cover;   
 }
 
-.navbar-login {
-    margin-top: 70px;
-    margin-right: 100px;
-    font-size: 12px;
+.login-content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 144px;
+}
+
+.navbar-logo {
+    font-size: 16px;
     letter-spacing: 4px;
     text-transform: uppercase;
     float: right;
 }
 
+.navbar-logo h1 {
+    padding-top: 4px;
+    font-size: 36px;
+    color: white;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.navbar-login {
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
 .navbar-buttons {
     float: none;
     vertical-align: top;
-    
 }
 
 .navbar-login li a {
     padding: 15px;
+    font-size: 16px;
     color: white;
     text-decoration: none;
 }
@@ -168,6 +206,5 @@
     margin-left: 48px;
     
 }
-
-
 </style>
+

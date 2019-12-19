@@ -1,19 +1,25 @@
 <template>
     <div class="connexion">
-        <div class="form-container">
-            <form class="form-group" @submit="checkForm()">
-                <input class="form-input form-control" 
-                       type="text" 
-                       v-model="email" 
-                       placeholder="email"/>
-                <input class="form-input form-control" 
-                       type="password" 
-                       v-model="password" 
-                       placeholder="mot de passe"/>
-                <button type="submit" 
-                        class="connexion-btn btn btn-primary">
-                        Connexion
-                </button>  
+        <div class="container">
+            <form @submit="checkForm()">
+                <div class="connexion-email form-group">
+                    <input v-model="email" type="email" class="connexion-form-input form-control" placeholder="Votre adresse email">
+                </div>
+                <div class="connexion-password form-group">
+                    <input v-model="password" type="password" class="connexion-form-input form-control" placeholder="Votre mot de passe">
+                </div>
+                <div class="form-check">
+                    <div class="row">
+                        <div class="col">
+                            <input type="checkbox" class="form-check-input">
+                            <label class="form-check-label">Souvenir de moi</label>
+                        </div>
+                        <div class="col">
+                           <a>Mot de passe oublié ?</a>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Connexion</button>
             </form>
         </div>
     </div>
@@ -38,6 +44,7 @@
             checkForm(){
                     for (let i=0; this.data.length; i++){
                         if ((this.email === this.data[i].mail) && (this.password === this.data[i].password)){
+                            localStorage.setItem('currentUser', JSON.stringify(this.data[i]))
                             this.$router.push("/home")
                         }else {
                             console.log("Mauvais mail ou mot de passe")
@@ -49,33 +56,76 @@
     }
 </script>
 
-<style >
-
-
-.form-container{
-    margin-top: 150px;
-    margin-left: 40%;
+<style scoped>
+.connexion form {
+    width: 500px;
+    text-align: center;
 }
 
-.form-input {
-    width: 50%;
-    margin: 5px;
+.connexion-email {
+    padding-bottom: 16px;
+}
+
+.connexion-form-input {
+    font-size: 16px;
     background: transparent;
     border-top: none;
     border-left: none;
     border-right: none;
     border-radius: 0px;
+    color: #A3ABBD !important;
     text-decoration-color: white;
 }
 
-
-.connexion-btn {
-    margin: 5px;
-    margin-top: 15px;
-    width: 20%;
-    border: none;
-    background: rgba(3, 37, 68, 0.5);
-    border-radius: 20px; 
+.form-control:focus {
+     /* width: 50%; */
+    background: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0px;
+    border-color: white;
+    box-shadow: none;
+    color: white !important;
+    text-decoration-color: white;
 }
 
+::placeholder {
+  color: #A3ABBD !important;
+}
+
+:focus::placeholder {
+  color: white !important;
+}
+
+.form-check {
+    margin-top: 40px;
+    color: #A3ABBD;
+}
+
+.form-check .col:first-child {
+    text-align: left;
+}
+
+.form-check .col:last-child {
+    text-align: right;
+}
+
+
+.btn {
+    width: 100%;
+    margin-top: 40px;
+    padding: 8px 16px;
+    border: none;
+    background: rgba(3, 37, 68, 0.8) !important;
+    border-radius: 30px; 
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .connexion form {
+        width: 200px;
+        text-align: center;
+    }
+}
 </style>
